@@ -1,0 +1,52 @@
+[
+  {"name": "Bench Press", "muscleGroup": "chest", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Incline Bench Press", "muscleGroup": "chest", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Dumbbell Fly", "muscleGroup": "chest", "equipmentType": "dumbbell", "barWeightKg": null, "isCustom": false},
+  {"name": "Cable Fly", "muscleGroup": "chest", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Push Up", "muscleGroup": "chest", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+
+  {"name": "Deadlift", "muscleGroup": "back", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Pull Up", "muscleGroup": "back", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+  {"name": "Lat Pulldown", "muscleGroup": "back", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Seated Cable Row", "muscleGroup": "back", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Dumbbell Row", "muscleGroup": "back", "equipmentType": "dumbbell", "barWeightKg": null, "isCustom": false},
+  {"name": "T-Bar Row", "muscleGroup": "back", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+
+  {"name": "Overhead Press", "muscleGroup": "shoulders", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Dumbbell Lateral Raise", "muscleGroup": "shoulders", "equipmentType": "dumbbell", "barWeightKg": null, "isCustom": false},
+  {"name": "Face Pull", "muscleGroup": "shoulders", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Arnold Press", "muscleGroup": "shoulders", "equipmentType": "dumbbell", "barWeightKg": null, "isCustom": false},
+  {"name": "Shrug", "muscleGroup": "shoulders", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+
+  {"name": "Barbell Curl", "muscleGroup": "biceps", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Dumbbell Curl", "muscleGroup": "biceps", "equipmentType": "dumbbell", "barWeightKg": null, "isCustom": false},
+  {"name": "Hammer Curl", "muscleGroup": "biceps", "equipmentType": "dumbbell", "barWeightKg": null, "isCustom": false},
+  {"name": "Preacher Curl", "muscleGroup": "biceps", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Cable Curl", "muscleGroup": "biceps", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+
+  {"name": "Tricep Pushdown", "muscleGroup": "triceps", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Skull Crusher", "muscleGroup": "triceps", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Overhead Tricep Extension", "muscleGroup": "triceps", "equipmentType": "dumbbell", "barWeightKg": null, "isCustom": false},
+  {"name": "Dips", "muscleGroup": "triceps", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+
+  {"name": "Squat", "muscleGroup": "legs", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Leg Press", "muscleGroup": "legs", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Romanian Deadlift", "muscleGroup": "legs", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Leg Curl", "muscleGroup": "legs", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Leg Extension", "muscleGroup": "legs", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Calf Raise", "muscleGroup": "legs", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Lunges", "muscleGroup": "legs", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+
+  {"name": "Hip Thrust", "muscleGroup": "glutes", "equipmentType": "barbell", "barWeightKg": 20.0, "isCustom": false},
+  {"name": "Glute Bridge", "muscleGroup": "glutes", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+  {"name": "Cable Kickback", "muscleGroup": "glutes", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+
+  {"name": "Plank", "muscleGroup": "core", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+  {"name": "Crunch", "muscleGroup": "core", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+  {"name": "Hanging Leg Raise", "muscleGroup": "core", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+  {"name": "Ab Wheel Rollout", "muscleGroup": "core", "equipmentType": "bodyweight", "barWeightKg": null, "isCustom": false},
+
+  {"name": "Treadmill", "muscleGroup": "cardio", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Cycling", "muscleGroup": "cardio", "equipmentType": "machine", "barWeightKg": null, "isCustom": false},
+  {"name": "Rowing Machine", "muscleGroup": "cardio", "equipmentType": "machine", "barWeightKg": null, "isCustom": false}
+]

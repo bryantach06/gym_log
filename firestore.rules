@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Each user owns everything under their own document.
+    match /users/{uid}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // History lookups query the `exercises` collection group across sessions.
+    // Only allowed when filtered to the caller's own uid (SessionRepository
+    // writes `uid` onto every session-exercise doc).
+    match /{path=**}/exercises/{entry} {
+      allow read: if request.auth != null && resource.data.uid == request.auth.uid;
+    }
+  }
+}

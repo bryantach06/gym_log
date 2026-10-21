@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1009364642053",
+    "project_id": "gym-log-49fbf",
+    "storage_bucket": "gym-log-49fbf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009364642053:android:fe3d763770c33966dbef6c",
+        "android_client_info": {
+          "package_name": "com.example.gym_log"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009364642053-tkadgjp1vf2v73s1760idg1u6h8545pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBC2RfJaTyQavKHl37cMlffHQM_IltHzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009364642053-tkadgjp1vf2v73s1760idg1u6h8545pt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1009364642053-tr712vq9i07mevk8dldlc5jif2d54hqs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.gymLog"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

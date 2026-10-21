@@ -1,0 +1,26 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "gym-log-49fbf",
+          "appId": "1:1009364642053:android:fe3d763770c33966dbef6c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "gym-log-49fbf",
+          "configurations": {
+            "android": "1:1009364642053:android:fe3d763770c33966dbef6c",
+            "ios": "1:1009364642053:ios:762cffb67076bb4bdbef6c"
+          }
+        }
+      }
+    }
+  }
+}
