@@ -4,6 +4,7 @@ import '../theme/app_theme.dart';
 import '../utils/formatters.dart';
 import '../utils/weight_calculator.dart';
 import '../utils/unit_converter.dart';
+import 'tap_to_edit.dart';
 
 /// Compact numeric cell for the set table. The unit lives in the column
 /// header; for barbell / dumbbell entries the derived total is shown below.
@@ -29,6 +30,7 @@ class WeightInputField extends StatefulWidget {
 
 class _WeightInputFieldState extends State<WeightInputField> {
   late final TextEditingController _ctrl;
+  final _focusNode = FocusNode();
   late double _valueKg; // always stored in kg internally
   bool _focused = false;
 
@@ -59,6 +61,7 @@ class _WeightInputFieldState extends State<WeightInputField> {
   @override
   void dispose() {
     _ctrl.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
@@ -81,23 +84,28 @@ class _WeightInputFieldState extends State<WeightInputField> {
           },
           child: Semantics(
             label: weightInputLabel(widget.equipmentType, useLbs: widget.useLbs),
-            child: TextField(
+            child: TapToEdit(
+              focusNode: _focusNode,
               controller: _ctrl,
-              keyboardType: const TextInputType.numberWithOptions(decimal: true),
-              textAlign: TextAlign.center,
-              style: AppTheme.number(context, size: 20),
-              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*'))],
-              decoration: const InputDecoration(
-                hintText: '0',
-                isDense: true,
-                contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 6),
+              child: TextField(
+                controller: _ctrl,
+                focusNode: _focusNode,
+                keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                textAlign: TextAlign.center,
+                style: AppTheme.number(context, size: 20),
+                inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d*'))],
+                decoration: const InputDecoration(
+                  hintText: '0',
+                  isDense: true,
+                  contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 6),
+                ),
+                onChanged: (v) {
+                  final displayVal = double.tryParse(v) ?? 0;
+                  // Convert display value back to kg for internal storage.
+                  setState(() => _valueKg = fromDisplayWeight(displayVal, widget.useLbs));
+                  widget.onChanged(_valueKg);
+                },
               ),
-              onChanged: (v) {
-                final displayVal = double.tryParse(v) ?? 0;
-                // Convert display value back to kg for internal storage.
-                setState(() => _valueKg = fromDisplayWeight(displayVal, widget.useLbs));
-                widget.onChanged(_valueKg);
-              },
             ),
           ),
         ),

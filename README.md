@@ -2,6 +2,29 @@
 
 A personal workout tracker for Android (Flutter + Firebase). Log sets as you train, see what you lifted last time, and track personal records and progression per exercise.
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/mockups/03_today_in_progress.png" width="200" alt="Today: workout in progress and this week's summary">
+  <img src="docs/mockups/06_log_sets.png" width="200" alt="Logging sets with previous-session values and PR highlights">
+  <img src="docs/mockups/10_exercise_progress.png" width="200" alt="Exercise personal records and progress chart">
+  <img src="docs/mockups/07_history.png" width="200" alt="Workout history grouped by month">
+</p>
+
+<details>
+<summary>More screens</summary>
+<br>
+
+| Sign in | Today | Active workout | Add exercise |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/mockups/01_sign_in.png" width="180" alt="Sign in"> | <img src="docs/mockups/02_today.png" width="180" alt="Today"> | <img src="docs/mockups/04_active_workout.png" width="180" alt="Active workout"> | <img src="docs/mockups/05_add_exercise_sheet.png" width="180" alt="Add exercise sheet"> |
+
+| Workout detail | Exercises | Profile | Light theme |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/mockups/08_workout_detail.png" width="180" alt="Workout detail"> | <img src="docs/mockups/09_exercises.png" width="180" alt="Exercise library"> | <img src="docs/mockups/11_profile.png" width="180" alt="Profile and settings"> | <img src="docs/mockups/13_log_sets_light.png" width="180" alt="Logging sets, light theme"> |
+
+</details>
+
 ## Features
 
 - **Workouts** — start an empty session, add exercises from your library, log sets with a running timer. One in-progress workout at a time; it survives app restarts.
@@ -72,6 +95,8 @@ lib/
 assets/
   exercises.json  Built-in exercise library
   fonts/          Barlow / Barlow Condensed (OFL) — bundled so the app works offline
+docs/mockups/     Framed screenshots used in this README
+tool/mockups/     Generator for docs/mockups (not run by `flutter test`)
 ```
 
 See [CLAUDE.md](CLAUDE.md) for a deeper architecture overview: Firestore data layout, how the history queries work, and the logger's save behaviour.

@@ -18,7 +18,7 @@ flutter test --plain-name "substring of test name"   # single test by name
 firebase deploy --only firestore                  # deploy firestore.rules + firestore.indexes.json
 ```
 
-Tests live in `test/blocs/` and `test/utils/`; bloc tests use `bloc_test` + `mocktail`, mocking repositories (e.g. `class MockSessionRepository extends Mock implements SessionRepository {}`). Firebase is never initialized in tests, so blocs must only touch Firestore through injected repositories.
+Tests live in `test/blocs/`, `test/utils/` and `test/widgets/`; bloc tests use `bloc_test` + `mocktail`, mocking repositories (e.g. `class MockSessionRepository extends Mock implements SessionRepository {}`). Firebase is never initialized in tests, so blocs must only touch Firestore through injected repositories.
 
 ## Architecture
 

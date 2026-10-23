@@ -5,6 +5,7 @@ import '../theme/app_theme.dart';
 import '../utils/formatters.dart';
 import 'pr_badge.dart';
 import 'set_badge.dart';
+import 'tap_to_edit.dart';
 import 'weight_input_field.dart';
 
 /// Column widths shared by [SetTableHeader] and [SetInputRow].
@@ -86,14 +87,13 @@ class SetInputRow extends StatefulWidget {
 
 class _SetInputRowState extends State<SetInputRow> {
   late final TextEditingController _repsCtrl;
+  final _repsFocus = FocusNode();
   bool _repsFocused = false;
 
   @override
   void initState() {
     super.initState();
-    _repsCtrl = TextEditingController(
-      text: widget.set.reps == 0 ? '' : '${widget.set.reps}',
-    );
+    _repsCtrl = TextEditingController(text: widget.set.reps == 0 ? '' : '${widget.set.reps}');
   }
 
   @override
@@ -112,6 +112,7 @@ class _SetInputRowState extends State<SetInputRow> {
   @override
   void dispose() {
     _repsCtrl.dispose();
+    _repsFocus.dispose();
     super.dispose();
   }
 
@@ -172,18 +173,23 @@ class _SetInputRowState extends State<SetInputRow> {
               flex: _repsFlex,
               child: Focus(
                 onFocusChange: (focused) => setState(() => _repsFocused = focused),
-                child: TextField(
+                child: TapToEdit(
+                  focusNode: _repsFocus,
                   controller: _repsCtrl,
-                  keyboardType: TextInputType.number,
-                  inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-                  textAlign: TextAlign.center,
-                  style: AppTheme.number(context, size: 20),
-                  decoration: const InputDecoration(
-                    hintText: '0',
-                    isDense: true,
-                    contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 6),
+                  child: TextField(
+                    controller: _repsCtrl,
+                    focusNode: _repsFocus,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    textAlign: TextAlign.center,
+                    style: AppTheme.number(context, size: 20),
+                    decoration: const InputDecoration(
+                      hintText: '0',
+                      isDense: true,
+                      contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 6),
+                    ),
+                    onChanged: (v) => widget.onRepsChanged(int.tryParse(v) ?? 0),
                   ),
-                  onChanged: (v) => widget.onRepsChanged(int.tryParse(v) ?? 0),
                 ),
               ),
             ),
